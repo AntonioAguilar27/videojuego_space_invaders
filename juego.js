@@ -65,7 +65,7 @@ k.scene("juego", () => {
     k.area(),
     k.pos(k.width() / 2, k.height() - 60),
     k.anchor("center"),
-    k.scale(0.15),
+    k.scale(0.25),
   ]);
 
   k.onKeyDown("left", () => {
@@ -91,13 +91,13 @@ k.scene("juego", () => {
   k.onKeyPress("space", disparar);
 
   function crearAliens() {
-    for (let i = 0; i < 4; i++) {
-      for (let j = 0; j < 3; j++) {
+    for (let i = 0; i < 12; i++) {
+      for (let j = 0; j < 4; j++) {
         k.add([
           k.sprite("alien"),
           k.area(),
           k.pos(60 + i * 100, 40 + j * 80),
-          k.scale(0.1),
+          k.scale(0.2),
           "alien",
         ]);
       }
