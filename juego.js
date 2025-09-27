@@ -20,6 +20,20 @@ k.scene("menu", () => {
     bg.scale = k.vec2(k.width() / bg.width, k.height() / bg.height);
   });
 
+  // 📌 Instrucciones sobre cómo jugar
+  k.add([
+    k.text(
+      "Instrucciones:\n← Mover Izquierda\n→ Mover Derecha\nEspacio: Disparar",
+      {
+        size: 20,
+        align: "center",
+      }
+    ),
+    k.pos(k.center().x, k.center().y - 100), // un poco más arriba del botón
+    k.anchor("center"),
+    k.color(255, 255, 255),
+  ]);
+
   // Añade el botón de "Comenzar"
   const startButton = k.add([
     k.rect(240, 60, { radius: 8 }),
